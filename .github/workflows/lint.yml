@@ -13,6 +13,12 @@ jobs:
         
       - name: Install Linter
         run: pip install ruff
+
+      - name: Install black
+        run: pip install black
+
+      - name: Format code 
+        run: black *.py
         
       - name: check the file for linting
         run: ruff check .
