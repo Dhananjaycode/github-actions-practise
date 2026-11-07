@@ -1,0 +1,19 @@
+
+# Workflow Name
+name: Hello
+
+# On when the workflows would run [Give Indentation by tab]
+on:
+  workflow_dispatch:
+  
+# Job tells what the workflow should do, there can be one or more than one jobs, hence we write jobs
+# Jobs is an object so need indentation
+
+jobs:
+  # 1st job ( give indentation)
+  say-hello:
+    # Creates as Ephermal Container with ubantu running
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello to everyone
+        run: echo "Hello Dosto"
