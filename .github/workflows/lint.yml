@@ -4,13 +4,17 @@ on:
     paths: "*.py"
     branches: ["main"]
 jobs:
-  code:
+  code-linter:
     runs-on: ubuntu-latest
     # this step will automatically clone the code from current branch into the runner
     steps:
       - name: Checkout the code
         uses: actions/checkout@v7
+        
       - name: Install Linter
         run: pip install ruff
+        
+      - name: check the file for linting
+        run: ruff check .
   
 
