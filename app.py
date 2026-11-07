@@ -1,4 +1,4 @@
-# This code for testing
+# This code for testing linting
 from flask import Flask, render_template
 app = Flask(__name__)
 
